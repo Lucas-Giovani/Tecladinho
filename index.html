@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teclas</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div class="teclado">
+    <div class="linha1">
+        <div class="esc"><button id="27"  class="escc">Esc</button ></div>
+        <div class="marca"><img class="logo" src="Logo.png"></div>
+        
+    </div>
+    <div class="linha2">
+        <button id="222"   class="btn" style="font-size: 20px;">~ <br> `</button >
+        <button id="49"  class="btn">! <br> 1</button >
+        <button id="50"  class="btn">@ <br> 2</button >
+        <button id="51"  class="btn"># <br> 3</button >
+        <button id="52"  class="btn">$ <br> 4</button >
+        <button id="53"  class="btn">% <br> 5</button >
+        <button id="54"  class="btn">¨¨<br> 6</button >
+        <button id="55"  class="btn">& <br> 7</button >
+        <button id="56"  class="btn">* <br> 8</button >
+        <button id="57"  class="btn">( <br> 9</button >
+        <button id="48"  class="btn">) <br> 0</button >
+        <button id="189"  class="btn" style="font-size: 20px;">_ <br> -</button >
+        <button id="187"  class="btn">+ <br> = &nbsp; §</button >
+        <button id="8"  class="backspace">Backspace</button >
+    </div>
+    <div class="linha3">
+        <button id="9"  class="tab">Tab</button >
+        <button id="81"  class="btn">Q</button >
+        <button id="87"  class="btn">W</button >
+        <button id="69"  class="btn">E</button >
+        <button id="82"  class="btn">R</button >
+        <button id="84"  class="btn">T</button >
+        <button id="89"  class="btn">Y</button >
+        <button id="85"  class="btn">U</button >
+        <button id="73"  class="btn">I</button >
+        <button id="79"  class="btn">O</button >
+        <button id="80"  class="btn">P</button >
+        <button id="221"  class="btn" style="font-size: 17px;">{ <br> [</button >
+        <button id="220"  class="btn" style="font-size: 17px;">} <br> ]</button >
+        <button id="226"  class="btn" style="font-size: 17px;">| <br> \</button >
+    </div>
+    <div class="linha4">
+        <button id="20"  class="lupa">Caps Lock</button >
+        <button id="65"  class="btn">A</button >
+        <button id="83"  class="btn">S</button >
+        <button id="68"  class="btn">D</button >
+        <button id="70"  class="btn">F</button >
+        <button id="71"  class="btn">G</button >
+        <button id="72"  class="btn">H</button >
+        <button id="74"  class="btn">J</button >
+        <button id="75"  class="btn">K</button >
+        <button id="76"  class="btn">L</button >
+        <button id="191"  class="btn" style="font-size: 20px;">: <br> ;</button >
+        <button id="192"  class="btn" style="font-size: 20px;">" <br> '</button >
+        <button id="13"  class="enter">Enter</button >
+    </div>
+    <div class="linha5">
+        <button id="16"  class="shift">Shift</button >
+        <button id="90"  class="btn">Z</button >
+        <button id="88"  class="btn">X</button >
+        <button id="67"  class="btn">C</button >
+        <button id="86"  class="btn">V</button >
+        <button id="66"  class="btn">B</button >
+        <button id="78"  class="btn">N</button >
+        <button id="77"  class="btn">M</button >
+        <button id="188"  class="btn" style="font-size: 17px;"> < <br> ,</button >
+        <button id="190"  class="btn" style="font-size: 17px;">> <br> .</button >
+        <button id="193"  class="btn" style="font-size: 17px;"> ? <br> /</button >
+        <button id="16"  class="shift">Shift</button >
+    </div>
+    <div class="linha6">
+        <button id="17"  class="ctrlalt">Ctrl</button >
+        <button id="18"  class="ctrlalt">Alt</button >
+        <button id="32"  class="space"></button >
+        <button class="btn">Alt</button >
+        <button id="17"  class="btn">Ctrl</button >
+        <div class="alinhar">
+        <button id="37"  class="setas1"><</button >
+            <div class="setas">
+                <button id="38"  class="setas2" style="font-size: 15px;">^</button >
+                <button id="40"  class="setas3">v</button >
+            </div>
+            <button id="39"  class="setas1">></button >
+        </div>
+    </div>
+</div>
+</body>
+
+
+<script>
+    document.onkeydown = Pega_Tecla;
+
+function Pega_Tecla(e) 
+{	
+    e = e || window.event;
+    tecla = e.keyCode;
+    TirarCores();
+    document.getElementById(tecla).style.backgroundColor = "#5d18dc"
+}
+
+function TirarCores()
+{
+    for (x=1;x<=300;x++)
+    {
+        try
+        {
+            document.getElementById(x).style.backgroundColor = "#242325"
+        }
+        catch(erro)
+        {   }
+    }
+}
+</script>
+</html>
